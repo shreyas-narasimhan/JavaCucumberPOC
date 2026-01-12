@@ -13,7 +13,7 @@ public class BrowserDriver {
         options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         this.driver = new ChromeDriver();
-        driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html#");
+        driver.get("https://automationteststore.com/index.php?rt=account/login");
     };
 
     public void close(){
