@@ -22,6 +22,6 @@ public class LoginPage {
 
     public static void MyAccountVerify(){
         String title1 = driver.findElement(By.xpath(ver_my_AccountTitle)).getText();
-        Assert.assertEquals(title1, "My Account");
+        Assert.assertEquals(title1, "MY ACCOUNT");
     }
 }
