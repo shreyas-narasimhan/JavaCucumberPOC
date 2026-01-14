@@ -1,8 +1,7 @@
 Feature: End-to-end scenario covering login, product selection, cart validation, and checkout
 
   Scenario: Validate that the user is able to log in
-    Given the user navigates to the login page
-    And the user enters valid login credentials
+    Given the user navigates to the login page and enter the credentials
     Then the user should be able to view the My Account page
 
   Scenario: Validate that the user is able to select products
