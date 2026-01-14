@@ -6,11 +6,9 @@ Feature: End-to-end scenario covering login, product selection, cart validation,
 
   Scenario: Validate that the user is able to select products
     Given the user navigates to the Books page
-    And the user selects a book and retrieves its name
-    And the user adds the book to the cart
+    And the user selects a book and adds it to the cart
     And the user searches for a product using the search bar
-    And the user retrieves the product details
-    Then the user adds the product to the cart
+    Then the user retrieves the product details and adds it to the cart
 
   Scenario: Validate the products in the cart
     Given the user navigates to the cart
