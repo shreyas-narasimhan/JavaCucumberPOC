@@ -7,12 +7,10 @@ import static utility.BrowserDriver.driver;
 
 public class LoginPage {
     public static String username_xpath = "//input[@name=\"loginname\"]";
-
     public static String password_xpath = "//input[@name=\"password\"]";
-
     public static String login_btn_xpath = "//button[@type=\"submit\" and @title=\"Login\"]";
-
     public static String ver_my_AccountTitle = "(//span[normalize-space(text())='My Account'])[1]";
+
     public static void LoginAction()
     {
         driver.findElement(By.xpath(username_xpath)).sendKeys("automationdemo");
