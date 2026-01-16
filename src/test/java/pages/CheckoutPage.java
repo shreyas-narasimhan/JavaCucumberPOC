@@ -26,6 +26,14 @@ public class CheckoutPage {
     }
 
     public void verify_order_placed(){
+        String orderplaced = driver.findElement(By.xpath(ver_order_placed)).getText();
+        Assert.assertEquals(orderplaced, "Your Order Has Been Processed!");
+    }
 
+    public void logout_session(){
+        driver.findElement(By.xpath(account_btn)).click();
+        driver.findElement(By.xpath(logout_btn)).click();
+        String logout_msg = driver.findElement(By.xpath(ver_logout)).getText();
+        Assert.assertEquals(logout_msg, "Account Logout");
     }
 }
