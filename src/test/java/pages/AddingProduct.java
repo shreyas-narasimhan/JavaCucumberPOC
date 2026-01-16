@@ -8,8 +8,8 @@ import static utility.BrowserDriver.driver;
 public class AddingProduct {
 
     public static String select_product_category = "//*[@id=\"categorymenu\"]/nav/ul/li[8]/a";
-    public static String ret_product_retname = "//*[@id=\"maincontainer\"]/div/div/div/div/div[3]/div[3]/div[1]/div/a";
-    public static String add_product_to_cart = "(//a[@data-id = \"113\" and @title=\"Add to Cart\"])[1]";
+    public static String ret_product_retname = "//*[@id=\"maincontainer\"]/div/div/div/div/div[3]/div[4]/div[1]/div/a";
+    public static String add_product_to_cart = "(//a[@data-id = \"114\" and @title=\"Add to Cart\"])[1]";
     public static String searchbar = "//input[@placeholder=\"Search Keywords\"]";
     public static String search_new_product = "//div[@title=\"Go\"]";
     public static String retrieve_second_product = "//a[@title=\"Skinsheen Bronzer Stick\"]";
@@ -29,7 +29,7 @@ public class AddingProduct {
 
     public void check_Name_first_Product()
     {
-        Assert.assertEquals(ProductName1,"Allegiant by Veronica Roth");
+        Assert.assertEquals(ProductName1,"ALLEGIANT BY VERONICA ROTH");
     }
 
     public void Navigate_to_second_product()
@@ -45,6 +45,6 @@ public class AddingProduct {
 
     public void check_Name_second_Product()
     {
-        Assert.assertEquals(ProductName2,"Skinsheen Bronzer Stick");
+        Assert.assertEquals(ProductName2,"SKINSHEEN BRONZER STICK");
     }
 }

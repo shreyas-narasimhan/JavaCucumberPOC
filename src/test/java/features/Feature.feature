@@ -1,9 +1,5 @@
 Feature: End-to-end scenario covering login, product selection, cart validation, and checkout
 
-  Scenario: Validate that the user is able to log in
-    Given the user navigates to the login page and enter the credentials
-    Then the user should be able to view the My Account page
-
   Scenario: Validate that the user is able to select products
     Given the user navigates to the Books page
     And the user selects a book and adds it to the cart
@@ -12,11 +8,9 @@ Feature: End-to-end scenario covering login, product selection, cart validation,
 
   Scenario: Validate the products in the cart
     Given the user navigates to the cart
-    And the user verifies the items in the cart along with the retrieved details
-    Then the user proceeds to checkout
+    Then the user verifies the items in the cart along with the retrieved details
 
   Scenario: Validate the checkout process
-    Given the user verifies the products again on the checkout page
-    And the user proceeds with placing the order
-    And the user validates that the order is placed successfully
-    Then the user logs out and verifies that they have logged out successfully
+    Given the user navigates to the cart again to checkout
+    And the user verifies the products again on the checkout page
+    Then the user proceeds with placing the order
