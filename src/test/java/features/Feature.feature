@@ -17,6 +17,6 @@ Feature: End-to-end scenario covering login, product selection, cart validation,
 
   Scenario: Validate the checkout process
     Given the user verifies the products again on the checkout page
-    When the user proceeds with placing the order
-    Then the user validates that the order is placed successfully
-    And the user logs out and verifies that they have logged out successfully
+    And the user proceeds with placing the order
+    And the user validates that the order is placed successfully
+    Then the user logs out and verifies that they have logged out successfully
