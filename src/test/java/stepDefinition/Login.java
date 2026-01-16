@@ -15,7 +15,7 @@ public class Login {
     }
 
     @Then("the user should be able to view the My Account page")
-    public void user_is_anble_to_view_account_page(){
+    public void user_is_able_to_view_account_page(){
         loginPage.MyAccountVerify();
     }
 }
