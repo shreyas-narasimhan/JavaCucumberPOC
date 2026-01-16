@@ -14,8 +14,8 @@ public class AddingProduct {
     public static String search_new_product = "//div[@title=\"Go\"]";
     public static String retrieve_second_product = "//a[@title=\"Skinsheen Bronzer Stick\"]";
     public static String add_2ndproduct_to_cart = "(//a[@data-id = \"50\" and @title=\"Add to Cart\"])[1]";
-    public String ProductName1;
-    public String ProductName2;
+    public static String ProductName1;
+    public static String ProductName2;
 
     public void Navigate_to_BooksPage_add_it_to_cart()
     {
