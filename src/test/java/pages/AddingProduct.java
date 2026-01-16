@@ -17,19 +17,14 @@ public class AddingProduct {
     public static String ProductName1;
     public static String ProductName2;
 
-    public void Navigate_to_BooksPage_add_it_to_cart()
+    public void Navigate_to_BooksPage()
     {
         driver.findElement(By.xpath(select_product_category)).click();
-        ProductName1 = driver.findElement(By.xpath(ret_product_retname)).getText();
-        driver.findElement(By.xpath(add_product_to_cart)).click();
     }
 
-    public void Navigate_to_second_product_add_it_to_cart()
-    {
-        driver.findElement(By.xpath(searchbar)).sendKeys("Makeup");
-        driver.findElement(By.xpath(search_new_product)).click();
-        ProductName2 = driver.findElement(By.xpath(retrieve_second_product)).getText();
-        driver.findElement(By.xpath(add_2ndproduct_to_cart)).click();
+    public void add_Book_to_cart(){
+        ProductName1 = driver.findElement(By.xpath(ret_product_retname)).getText();
+        driver.findElement(By.xpath(add_product_to_cart)).click();
     }
 
     public void check_Name_first_Product()
@@ -37,9 +32,19 @@ public class AddingProduct {
         Assert.assertEquals(ProductName1,"Allegiant by Veronica Roth");
     }
 
+    public void Navigate_to_second_product()
+    {
+        driver.findElement(By.xpath(searchbar)).sendKeys("Makeup");
+        driver.findElement(By.xpath(search_new_product)).click();
+    }
+
+    public void add_second_product_to_cart(){
+        ProductName2 = driver.findElement(By.xpath(retrieve_second_product)).getText();
+        driver.findElement(By.xpath(add_2ndproduct_to_cart)).click();
+    }
+
     public void check_Name_second_Product()
     {
         Assert.assertEquals(ProductName2,"Skinsheen Bronzer Stick");
     }
-
 }
