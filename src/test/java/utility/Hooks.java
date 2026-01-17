@@ -9,7 +9,7 @@ public class Hooks {
 
     public static BrowserDriver browserDriver;
 
-        Login login = new Login();
+        Login login = new Login(); //login object creation and using it in hooks
 
     @Before
     public void setUp() throws Throwable {
