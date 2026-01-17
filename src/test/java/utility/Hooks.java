@@ -9,10 +9,13 @@ public class Hooks {
 
     public static BrowserDriver browserDriver;
 
+        Login login = new Login();
+
     @Before
     public void setUp() throws Throwable {
         browserDriver = new BrowserDriver();
         //driver.manage().window().maximize();
+        login.login();
     }
 
     @After
