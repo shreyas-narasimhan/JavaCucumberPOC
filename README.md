@@ -1,35 +1,56 @@
 JavaCucumberPOC
-
-This is a sample automation testing framework built using Java, Maven, Selenium, Cucumber, and TestNG to support end-to-end test automation following BDD principles.
-
+This is a sample automation testing framework using Java, Maven, Selenium, Cucumber, and TestNG.
 Java
 
-Java is used as the core programming language to write test scripts, step definitions, hooks, and overall framework logic. It provides object-oriented structure, reusability, and robustness to the automation framework.
+Java is used as the programming language to write test scripts,
+step definitions, hooks, and core framework logic.
 
 Maven
 
 Maven is used as the build and dependency management tool.
-It helps maintain consistency across environments through the pom.xml file, where all dependencies, plugins, and test execution configurations are defined.
-Maven also manages the standard project structure and automates test execution.
+It helps in maintaining consistency across environments
+by using the pom.xml file to define dependencies, plugins,
+and test execution configurations.
+Maven also manages project structure and automates test execution.
 
 Selenium
 
-Selenium is used for browser automation to interact with web elements.
-It performs actions such as clicking, typing, submitting forms, and validating UI behavior across different browsers to ensure application stability and correctness.
+Selenium is used for browser automation to interact with web elements,
+perform actions such as click, type, submit, and validate UI behavior
+across different browsers.
 
 Cucumber
 
-Cucumber is used for Behavior Driven Development (BDD), allowing test scenarios to be written in simple English using Gherkin syntax.
-It follows the Given–When–Then format, which improves readability and enables effective collaboration between technical and non-technical stakeholders.
-Scenarios are clearly differentiated based on functionality and task, such as login, product selection, cart validation, and checkout.
+Cucumber is used for Behavior Driven Development (BDD),
+allowing test cases to be written in simple English using Gherkin syntax.
+It uses Given-When-Then steps to improve readability
+and collaboration between technical and non-technical team members.
+Test scenarios are differentiated according to the task or functionality.
 
 TestNG
 
-TestNG is used as the test execution and reporting framework.
-It manages the test lifecycle, supports annotations, parallel execution, grouping, and provides detailed test reports.
-TestNG integrates seamlessly with Cucumber to control scenario execution and enhance test management.
+TestNG is used as the test runner and assertion framework,
+responsible for executing test cases, managing the test lifecycle,
+supporting annotations, grouping, parallel execution,
+and generating detailed test reports.
 
 Hooks and Logging
 
-The framework uses Cucumber Hooks, specifically the BeforeHook, to perform pre-scenario setup activities.
-Logging functionality is implemented inside the BeforeHook to capture important execution details before each scenario starts.
+Logging functionality is implemented using Cucumber Hooks.
+Hooks are used to manage setup and teardown activities
+before and after each scenario execution.
+
+BeforeHook
+
+BeforeHook is executed before every scenario,
+and is used to initialize the browser,
+set up test data and environment,
+and start logging for scenario execution.
+
+AfterHook
+
+AfterHook is executed after every scenario,
+and is used to perform cleanup activities such as
+closing the browser, capturing screenshots on failure,
+ending logs, and releasing resources.
+This ensures proper teardown and improves test stability.
